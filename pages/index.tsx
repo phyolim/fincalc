@@ -46,7 +46,7 @@ const calculateContributionAllowed = (filingStatus: "single" | "married", magi: 
 export default function Example() {
   const [contributionAllowed, setContributionAllowed] = useState(0);
 
-  const defaultValues = {
+  const defaultValues: { filingStatus: "single" | "married"; magi: number } = {
     filingStatus: "single",
     magi: 0,
   };
@@ -56,7 +56,7 @@ export default function Example() {
   const watchFields = watch();
 
   useEffect(() => {
-    setContributionAllowed(calculateContributionAllowed(watchFields.filingStatus, watchFields.magi));
+    return setContributionAllowed(calculateContributionAllowed(watchFields.filingStatus, watchFields.magi));
   }, [watchFields.filingStatus, watchFields.magi]);
 
   const onSubmit = (v: any) => {
