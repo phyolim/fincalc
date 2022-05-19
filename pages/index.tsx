@@ -128,8 +128,7 @@ export default function Example() {
                           ESA Contribution Calculator
                         </h2>
                         <p className="mt-1 text-sm text-gray-500">
-                          Select your filing status and enter your modified adjusted gross income (MAGI) and click
-                          Calculate to get the Education Savings Account contribution amount.
+                          Select your filing status and enter your modified adjusted gross income (MAGI).
                         </p>
                       </div>
 
