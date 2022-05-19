@@ -197,7 +197,9 @@ export default function Example() {
                             <dt className="text-base font-normal text-gray-900">Contribution Allowed</dt>
                             <dd className="md:block lg:flex flex items-baseline justify-between mt-1">
                               <div className="flex items-baseline text-2xl font-semibold text-indigo-600">
-                                {contributionAllowed ? formatter.format(contributionAllowed) : "Enter a value in MAGI"}
+                                {contributionAllowed || contributionAllowed >= 0
+                                  ? formatter.format(contributionAllowed)
+                                  : "Enter a value in MAGI"}
                               </div>
                             </dd>
                           </div>
